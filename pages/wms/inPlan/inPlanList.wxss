@@ -1,0 +1,39 @@
+/* pages/wms/inPlan/inPlanList.wxss */
+.list-item{
+    padding: 10rpx;
+    border:1rpx solid #eeeeee;
+    line-height: 50rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+}
+.text-item-label{
+    color: #333333;
+}
+.text-item-content{
+    color: #666666;
+}
+.list-item-buttom-button{
+    width: 100%;
+    background-color: #5077aa;
+    color: white;
+    margin: 10rpx 0 10rpx 0;
+}
+.search-box{
+    z-index: 999;
+    width: 100%;
+    height: 90rpx;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.search-input{
+    background-color: white;
+    border: 1rpx solid #eeeeee;
+    height: 70rpx;
+    border-radius: 20rpx;
+    color: #333333;
+    padding: 0 10rpx;
+}

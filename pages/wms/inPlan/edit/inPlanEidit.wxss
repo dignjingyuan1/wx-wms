@@ -1,0 +1,45 @@
+.list{
+    width: auto;
+    height: 100rpx;
+    display: flex;
+    border: 1px solid #eeeeee;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    line-height: 80rpx;
+    padding: 10rpx;
+    font-size: 16px;
+}
+.list-label{
+    width: 200rpx;
+    border-right: 1px solid #eeeeee;
+    text-align: center;
+    color: #333333;
+}
+.list-input-box{
+    flex: 1;
+    padding-left: 10rpx;
+    color: #666666;
+}
+.list-input{
+    height: 80rpx;
+}
+.disabled{
+    background-color: #eeeeee;
+}
+.list-item-buttom-button{
+    width: 100%;
+    background-color: #5077aa;
+    color: white;
+    margin: 10rpx 0 10rpx 0;
+}
+.search-box{
+    z-index: 999;
+    width: 100%;
+    height: 90rpx;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10rpx;
+    box-sizing: border-box;
+}

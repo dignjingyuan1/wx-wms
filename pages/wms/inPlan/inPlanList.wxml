@@ -1,0 +1,39 @@
+<view class="container have-search-input">
+    <view class="search-box">
+        <input 
+            model:value="{{planInNo}}"
+            class="search-input" 
+            type="text" 
+            placeholder="请入单号查找"
+            confirm-type="search"
+            bindconfirm="onLoad"
+        />
+    </view>
+    <view class="list-item" wx:for="{{planList}}" wx:for-index="id" wx:for-item="planItem">
+        <view class="text-item-label">单号：
+            <text class="text-item-content">{{planItem.planInNo}}</text>
+        </view>
+        <!-- <view class="text-item-label">库位：
+            <text class="text-item-content">{{planItem.boothName}}</text>
+        </view> -->
+        <view class="text-item-label">货权方：
+            <text class="text-item-content">{{planItem.customerName}}</text>
+        </view>
+        <view class="text-item-label">预计入库日期：
+            <text class="text-item-content">{{planItem.planInFromDate}}</text>
+        </view>
+        <view class="text-item-label">预计完成日期：
+            <text class="text-item-content">{{planItem.planInEndDate}}</text>
+        </view>
+        <view class="text-item-label">计划量（吨）：
+            <text class="text-item-content">{{planItem.planInAmount}}</text> 
+        </view>
+        <view class="text-item-label">计划状态：{{planItem.planStatus}}</view>
+        <view>
+            <button class="list-item-buttom-button" 
+                bindtap="inPlanEidit"
+                data-planno="{{planItem.planInNo}}"
+            >入库登记</button>
+        </view>
+    </view>
+</view>

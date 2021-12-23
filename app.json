@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/wms/inPlan/inPlanList",
+        "pages/wms/inPlan/edit/inPlanEidit",
+        "pages/wms/outPlan/outPlanList",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/wms/test",
+        "pages/wms/outPlan"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
