@@ -1,0 +1,108 @@
+<view class="container have-search-input">
+    <view class="search-box secend-title">
+       易谷数字仓储系统
+    </view>
+    <view class="list">
+        <view class="list-label">计划编号：</view>
+        <view class="list-input-box disabled">
+            <input model:value="{{plan.otherNo}}" class="list-input" type="text" disabled="ture"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">水分%：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写水分%" model:value="{{water}}" class="list-input" type="text" disabled="ture"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">容重g/L：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写容重g/L" model:value="{{volume}}" class="list-input" type="text" disabled="ture"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">杂质%：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写杂质%" model:value="{{impurity}}" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">不完善粒%：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写不完善粒%" model:value="{{imperfectGrain}}" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">霉变粒%：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写不完霉变粒%" model:value="{{moldyGrain}}" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">色泽气味儿：</view>
+        <view class="list-input-box">
+            <picker
+                bindchange="bindPickerChange" 
+                value="{{index}}" 
+                range-key="name"
+                range="{{colorSmellList}}">
+                <view class="list-input picker">
+                    {{colorSmellList[index].name?colorSmellList[index].name:'请选择色泽气味儿'}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">等级：</view>
+        <view class="list-input-box">
+            <picker
+                bindchange="bindPickerChange" 
+                value="{{index}}" 
+                range-key="name"
+                range="{{gradeList}}">
+                <view class="list-input picker">
+                    {{gradeList[index].name?gradeList[index].name:'请选择等级'}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">质检意见：</view>
+        <view class="list-input-box">
+            <picker
+                bindchange="bindPickerChange" 
+                value="{{index}}" 
+                range-key="name"
+                range="{{qaOpinionList}}">
+                <view class="list-input picker">
+                    {{qaOpinionList[index].name?qaOpinionList[index].name:'请选择质检意见'}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label" style="font-size: 14px;">质检意见备注：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写质检意见备注" model:value="{{qaOpinionMemo}}" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="save"
+        data-planno="{{planItem.planInNo}}"
+    >保存并打印</button>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="goBack"
+        data-planno="{{planItem.planInNo}}"
+    >返回</button>
+</view>
