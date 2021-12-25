@@ -1,5 +1,10 @@
 {
     "pages": [
+        "pages/wms/outDoor/outDoor",
+        "pages/wms/outPlan/edit/outPlanEdit",
+        "pages/wms/lh/lh",
+        "pages/wms/quality/quality",
+        "pages/wms/inPlan/qy/qy",
         "pages/wms/inPlan/inPlanList",
         "pages/wms/inPlan/edit/inPlanEidit",
         "pages/wms/outPlan/outPlanList",

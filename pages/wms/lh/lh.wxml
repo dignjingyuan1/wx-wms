@@ -1,0 +1,70 @@
+<view class="container have-search-input">
+    <view class="search-box secend-title">
+       易谷数字仓储系统
+    </view>
+    <view class="list">
+        <view class="list-label">计划编号：</view>
+        <view class="list-input-box disabled">
+            <input model:value="{{plan.planInNo}}" class="list-input" type="text" disabled="ture"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">货权方：</view>
+        <view class="list-input-box disabled">
+            <input model:value="{{plan.customerName}}" class="list-input" type="text" disabled="ture"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">车牌号：</view>
+        <view class="list-input-box disabled">
+            <input model:value="{{trainBatchNumber}}" 
+            placeholder="请填写车牌号" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">扣杂：</view>
+        <view class="list-input-box">
+            <input placeholder="请填写司机姓名" model:value="{{contactName}}" class="list-input" type="text"/>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <view class="list">
+        <view class="list-label">库位：</view>
+        <view class="list-input-box">
+            <picker
+                bindchange="bindPickerChange" 
+                value="{{index}}" 
+                range-key="name"
+                range="{{qaOpinionList}}">
+                <view class="list-input picker">
+                    {{qaOpinionList[index].name?qaOpinionList[index].name:'请选择库位'}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="save"
+        data-planno="{{planItem.planInNo}}"
+    >理货开始</button>
+    <view style="height:20rpx"></view>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="save"
+        data-planno="{{planItem.planInNo}}"
+    >理货</button>
+    <view style="height:20rpx"></view>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="save"
+        data-planno="{{planItem.planInNo}}"
+    >理货结束</button>
+    <view style="height:20rpx"></view>
+    <button class="list-item-buttom-button" 
+        bindtap="goBack"
+        data-planno="{{planItem.planInNo}}"
+    >返回</button>
+</view>
